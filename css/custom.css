@@ -62,3 +62,15 @@ body {
     background-size: cover;
     transition: all 400ms ease-out;
 }
+.p-1 {
+    left: 0;
+}
+.p-2 {
+    left: 25%;
+}
+.p-3 {
+    left: 50%;
+}
+.p-4{
+    left : 75%;
+}
