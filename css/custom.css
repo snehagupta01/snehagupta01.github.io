@@ -34,3 +34,9 @@ body {
     font-weight: 400;
     background-color: black; 
 }
+.logo{
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    z-index: 10;
+}
