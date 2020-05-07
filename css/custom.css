@@ -1,0 +1,15 @@
+.preloader{
+    flex-wrap: nowrap;
+}
+.dark{
+    background-color: black;
+}
+.central{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.preloading {
+    position: fixed;
+    z-index: 2100;
+}
