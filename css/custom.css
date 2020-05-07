@@ -30,3 +30,7 @@
     left:50%;
     transform: translate(-8%, -50%);
 }
+body {
+    font-weight: 400;
+    background-color: black; 
+}
