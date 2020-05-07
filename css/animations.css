@@ -1,0 +1,48 @@
+.p-active, .p-inactive {
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+}
+
+.p-active-1{ animation-name: active-1; }
+.p-active-2{ animation-name: active-2; }
+.p-active-3{ animation-name: active-3; }
+.p-active-4{ animation-name: active-4; }
+
+.p-inactive-1{ animation-name: inactive-1; }
+.p-inactive-2{ animation-name: inactive-2; }
+.p-inactive-3{ animation-name: inactive-3; }
+.p-inactive-4{ animation-name: inactive-4; }
+
+@keyframes active-1 {
+    0% { width: 25%; left: 0 }
+    100% { width: 100%; left: 0; }
+}
+@keyframes active-2 {
+    0% { width: 25%; left: 25% }
+    100% { width: 100%; left: 0; }
+}
+@keyframes active-3 {
+    0% { width: 25%; left: 50% }
+    100% { width: 100%; left: 0; }
+}
+@keyframes active-4 {
+    0% { width: 25%; left: 75% }
+    100% { width: 100%; left: 0; }
+}
+@keyframes inactive-1 {
+    0% { width: 100%; left: 0; }
+    100% { width: 25%; left: 0 }
+}
+@keyframes inactive-2 {
+    0% { width: 100%; left: 0; }
+    100% { width: 25%; left: 25% }
+}
+@keyframes inactive-3 {
+    0% { width: 100%; left: 0; }
+    100% { width: 25%; left: 50% }
+}
+@keyframes inactive-4 {
+    0% { width: 100%; left: 0; }
+    100% { width: 25%; left: 75% }
+}
