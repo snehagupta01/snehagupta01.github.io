@@ -45,3 +45,20 @@ body {
 .primary-font {
     font-family: Heading, 'sans-serif';
 }
+.portion{
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    width: 25%;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #23232399;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 400ms ease-out;
+}
