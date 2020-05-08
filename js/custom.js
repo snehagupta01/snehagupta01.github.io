@@ -41,6 +41,7 @@ function appendBackButton() {
         .animate({
             opacity : 1
         });
+        appendDownButton();
         backBoxClick();
 }
 function backBoxClick() {
@@ -76,3 +77,10 @@ $.fn.fadeOutRemove = function ( callback = function () {} ) {
             callback();
     });
 };
+function appendDownButton() {
+    const downArrow = '<div class="round-button removable central text-white">' +
+        '<i class="material-icons">arrow_downward</i>' +
+        '</div>';
+    $(".portion").eq(activeTile).append(downArrow);
+    $(".removable").addClass("fading-in");
+}

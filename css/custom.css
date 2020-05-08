@@ -127,3 +127,13 @@ body {
     padding-left: 15px;
     color: white;
 }
+.round-button{
+    position: fixed;
+    bottom: 50px;
+    left: calc(50% - 25px);
+    border: 2px solid #FFF;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
