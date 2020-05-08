@@ -64,15 +64,19 @@ body {
 }
 .p-1 {
     left: 0;
+    background-color:blue;
 }
 .p-2 {
     left: 25%;
+    background-color:green;
 }
 .p-3 {
     left: 50%;
+    background-color:red;
 }
 .p-4{
     left : 75%;
+    background-color:purple;
 }
 .portion.clickable:hover {
     filter: brightness(150%);
