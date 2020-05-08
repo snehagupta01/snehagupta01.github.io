@@ -41,5 +41,38 @@ function appendBackButton() {
         .animate({
             opacity : 1
         });
-    
+        backBoxClick();
 }
+function backBoxClick() {
+    $(".back-box").on("click", function () {
+        const removeClassList = "p-active p-active-"+parseInt(activeTile + 1);
+        const addClassList = "p-inactive p-inactive-"+parseInt(activeTile + 1);
+        $('.portion')
+            .eq(activeTile)
+            .removeClass(removeClassList)
+            .addClass(addClassList)
+            .css("cursor", "pointer");
+        $(".removable").fadeOutRemove();
+        $(this).fadeOutRemove( function () {
+            $('.portion')
+                .eq(activeTile)
+                .addClass("clickable")
+                .css( { zIndex : 1 } );
+            if( activeScreen === 2) {
+                $(".portion").eq(activeTile).find(".tile").removeClass("animated fadeOutUp d-none").addClass("animated fadeInDown");
+            }
+        });
+
+    });
+}
+$.fn.fadeOutRemove = function ( callback = function () {} ) {
+    $(this)
+        .addClass("fading-out")
+        .animate({
+            opacity : 0,
+            transform : "translateY(30px)"
+        }, function () {
+            $(this).remove();
+            callback();
+    });
+};
