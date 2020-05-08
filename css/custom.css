@@ -100,3 +100,30 @@ body {
 .underline img {
     width: 100%;
 }
+.back-box{
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    top: 130px;
+    left: 50px;
+    opacity: 0;
+    cursor: pointer;
+    align-items: center;
+}
+.back-box .back-button {
+    height: 50px;
+    width: 50px;
+    color: #DB4343;
+    background: white;
+    border-radius: 50%;
+    border: none;
+}
+.back-box .back-button:focus {
+    outline: none
+}
+.back-box .back-text {
+    font-weight: 700;
+    font-style: italic;
+    padding-left: 15px;
+    color: white;
+}

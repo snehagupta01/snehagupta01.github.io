@@ -26,5 +26,20 @@ function onTileClick () {
                     .removeClass(removeClassList)
                     .addClass(addClassList);
             }
+            appendBackButton();
         });
+}
+function appendBackButton() {
+    const back = '<div class="back-box">' +
+        '<button class="back-button central"> <i class="material-icons">arrow_back</i> </button>' +
+        '<div class="back-text"> Back </div>' +
+        '</div>';
+    $(".portion")
+        .eq(activeTile)
+        .append(back)
+        .find(".back-box")
+        .animate({
+            opacity : 1
+        });
+    
 }
