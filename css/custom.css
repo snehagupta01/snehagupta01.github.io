@@ -72,11 +72,11 @@ body {
 }
 .p-3 {
     left: 50%;
-    background-image: url("../images/bg/p11.jpg");
+    background-image: url("../images/bg/p33.jpg");
 }
 .p-4{
     left : 75%;
-    background-image: url("../images/bg/p11.jpg");
+    background-image: url("../images/bg/p44.jpg");
 }
 .portion.clickable:hover {
     filter: brightness(150%);
