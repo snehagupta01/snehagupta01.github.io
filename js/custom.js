@@ -25,8 +25,8 @@ function onTileClick () {
                     })
                     .removeClass(removeClassList)
                     .addClass(addClassList);
+                appendBackButton();
             }
-            appendBackButton();
         });
 }
 function appendBackButton() {
@@ -41,8 +41,16 @@ function appendBackButton() {
         .animate({
             opacity : 1
         });
-        appendDownButton();
-        backBoxClick();
+    appendDownButton();
+    backBoxClick();
+}
+function appendDownButton() {
+    const downArrow = '<div class="round-button removable central text-white">' +
+        '<i class="material-icons">arrow_downward</i>' +
+        '</div>';
+    $(".portion").eq(activeTile).append(downArrow);
+    $(".removable").addClass("fading-in");
+
 }
 function backBoxClick() {
     $(".back-box").on("click", function () {
@@ -77,10 +85,3 @@ $.fn.fadeOutRemove = function ( callback = function () {} ) {
             callback();
     });
 };
-function appendDownButton() {
-    const downArrow = '<div class="round-button removable central text-white">' +
-        '<i class="material-icons">arrow_downward</i>' +
-        '</div>';
-    $(".portion").eq(activeTile).append(downArrow);
-    $(".removable").addClass("fading-in");
-}
