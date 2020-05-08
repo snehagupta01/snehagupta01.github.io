@@ -50,7 +50,7 @@ function appendDownButton() {
         '</div>';
     $(".portion").eq(activeTile).append(downArrow);
     $(".removable").addClass("fading-in");
-
+    onDownArrowClick();
 }
 function backBoxClick() {
     $(".back-box").on("click", function () {
@@ -85,3 +85,16 @@ $.fn.fadeOutRemove = function ( callback = function () {} ) {
             callback();
     });
 };
+function onDownArrowClick() {
+    let clicked = true;
+    $(".round-button").on("click", function () {
+        if(clicked){
+            clicked = false;
+            activeScreen = 2;
+            $(this).addClass("animated fadeOut");
+            $(".portion").eq(activeTile).find(".tile").addClass("animated fadeOutUp");
+        }
+
+    });
+
+}
