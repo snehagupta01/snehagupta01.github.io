@@ -1,0 +1,417 @@
+@font-face {
+    font-family: Heading;
+    src: url("../fonts/Pacifico.ttf");
+}
+@font-face {
+    font-family: PrimaryLight;
+    src: url("../fonts/Lato-Light.ttf");
+}
+@font-face {
+    font-family: Primary;
+    src: url("../fonts/Lato-Regular.ttf");
+}
+@font-face {
+    font-family: PrimaryMedium;
+    src: url("../fonts/Lato-Bold.ttf");
+}
+@font-face {
+    font-family: PrimaryBold;
+    src: url("../fonts/Lato-Black.ttf");
+}
+
+body {
+    font-family: Primary , sans-serif;
+    font-weight: 400;
+}
+.primary-font {
+    font-family: Heading, 'sans-serif';
+}
+
+
+.red { background-color: 	#FF8C00}
+.red-text { color: #DB4343; }
+
+.dark{ background-color: #232323; }
+.dark-text{ color: #232323; }
+
+.logo{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 10;
+}
+
+.fixed-center{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.central{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.preloader{
+    flex-wrap: nowrap;
+}
+.quarter{
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    width: 25%;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #23232399;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 400ms ease-out;
+}
+.quarter.clickable:hover {
+    filter: brightness(150%);
+    transition: all 400ms ease-out;
+}
+.q-1 {
+    left: 0;
+    background-image: url("../images/bg/1.jpg");
+}
+.q-2 {
+    left: 25%;
+    background-image: url("../images/bg/2.jpg");
+}
+.q-3 {
+    left: 50%;
+    background-image: url("../images/bg/3.jpg");
+}
+.q-4 {
+    left: 75%;
+    background-image: url("../images/bg/4.jpg");
+}
+
+
+
+.tile-heading {
+    position: relative;
+    font-size: 42px;
+}
+.tile-info {
+    font-size: 20px;
+    padding-top: 50px;
+}
+
+.underline {
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    height: 50px;
+    left: 0;
+}
+.underline img {
+    width: 100%;
+}
+
+.back-box{
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    top: 130px;
+    left: 50px;
+    opacity: 0;
+    cursor: pointer;
+    align-items: center;
+}
+.back-box .back-button {
+    height: 50px;
+    width: 50px;
+    color: #DB4343;
+    background: white;
+    border-radius: 50%;
+    border: none;
+}
+.back-box .back-button:focus {
+    outline: none
+}
+.back-box .back-text {
+    font-weight: 700;
+    font-style: italic;
+    padding-left: 15px;
+    color: white;
+}
+.round-button{
+    position: fixed;
+    bottom: 50px;
+    left: calc(50% - 25px);
+    border: 2px solid #FFF;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.ball {
+    z-index: 1050;
+    height: 70px;
+    width: 70px;
+    margin-left: 70px;
+    border-radius: 50%;
+}
+.preloading {
+    position: fixed;
+    z-index: 2100;
+}
+.circle {
+    background: url("../images/circle.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    padding: 130px;
+    font-family: PrimaryLight;
+    font-size: 32px;
+    cursor: pointer;
+}
+.circle img {
+    width: 60px;
+}
+div:first-of-type > .circle img{
+    width: 80px ;
+}
+.circle.home{
+    cursor: default ;
+    padding: 100px 0;
+    border-radius: 10px;
+    background: url("../images/circle.svg"), url("../images/projects/background.svg");
+}
+.fixed-circle {
+    position: fixed;
+    background: white;
+    border-radius: 50%;
+    height: 1px;
+    width: 1px;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    animation: scaleBig 600ms ease-out;
+    animation-fill-mode: forwards;
+
+}
+.data-holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    background-image: url("../images/projects/background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 12;
+}
+.heading {
+    width: 100%;
+    padding: 62px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content{
+    width: 100%;
+    padding: 30px 0;
+    height: calc(100vh - 208px);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow-y: scroll;
+}
+.content::-webkit-scrollbar{ width: 5px }
+.content::-webkit-scrollbar-track { background: transparent }
+.content::-webkit-scrollbar-thumb{ background: #232323; border-radius: 5px }
+
+.content > div > div:last-of-type {
+    margin-bottom: 90px;
+}
+
+.skill-title{
+    position: relative;
+}
+.skill-bar{
+    position: absolute;
+    bottom: -10px;
+    width: 40px;
+    height: 3px;
+    border-radius: 4px;
+    background: #232323;
+    left: calc(50% - 20px)
+}
+.heads{
+    font-family: PrimaryLight;
+    font-size: 56px;
+}
+.close-button{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid black;
+    opacity: 0.3;
+    cursor: pointer;
+}
+.close-button i, .controls i { font-size: 40px }
+.controls {
+    position: fixed;
+    top: calc(50% - 25px);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 3px solid black;
+    cursor: pointer;
+}
+.controls.next {
+    right: 10px;
+}
+.controls.prev {
+    left: 10px;
+}
+.carousel, .carousel-inner {
+    height: calc(100vh - 200px);
+}
+.carousel-item{
+    max-height: calc(100vh - 100px);
+    padding: 0 10px;
+    max-width: 100%;
+}
+.carousel-item img{
+    max-height: calc(100vh - 400px);
+    max-width: 90%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.carousel-indicators{
+    align-items: center;
+}
+.carousel-indicators li{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #232323;
+    transition: all 300ms ease-in-out;
+}
+.carousel-indicators li.active{
+    transition: all 300ms ease-in-out;
+}
+.carousel-caption {
+    bottom: 30px;
+}
+
+.social img {
+    width: 30px !important;
+}
+
+@media screen and (max-width: 1200px) {
+    .circle{
+        padding: 100px;
+    }
+}
+@media screen and (max-width: 991.98px) {
+    .circle{
+        padding: 80px;
+        font-size: 24px;
+    }
+    .quarter{
+        left: 0;
+        width: 100%;
+        height: 25vh;
+    }
+    .q-1 {
+        top: 0;
+    }
+    .q-2 {
+        top: 25%;
+    }
+    .q-3 {
+        top: 50%;
+    }
+    .q-4 {
+        top: 75%;
+    }
+    .tile-heading {
+        font-size: 24px;
+    }
+    .tile-info {
+        padding-top: 20px;
+        font-size: 14px;
+    }
+    .back-box{
+        top: 10px;
+        left: 10px;
+    }
+    .heading{
+        padding: 20px;
+    }
+    .content{
+        padding: 20px 0;
+        height: calc(100vh - 73px);
+    }
+    .heads{
+        font-size: 22px;
+    }
+    .circle{
+        padding: 50px;
+        font-size: 18px;
+    }
+    .circle.home{
+        padding: 75px;
+        font-size: 20px;
+    }
+    .circle img {
+        width: 40px;
+    }
+    div:first-of-type > .circle img{
+        width: 45px ;
+    }
+    .controls, .close-button{
+        height: 30px;
+        width: 30px;
+        border: 1px solid black;
+    }
+    .close-button i, .controls i { font-size: 16px }
+    .carousel, .carousel-inner {
+        height: calc(100vh - 100px);
+    }
+    .carousel-item img{
+        max-height: calc(100vh - 300px);
+    }
+
+    .skill-title {
+        font-size: 18px;
+    }
+    .skill-title ~ h5 {
+        font-size: 14px;
+    }
+
+}
+@media screen and (max-width: 575.98px) {
+    .content{
+        align-items: flex-start !important;
+        padding-top: 100px;
+    }
+}
+@media screen and (max-height: 500px) {
+    .carousel-caption { display: none !important; }
+}
+@media screen and (max-height: 600px) and (max-width: 600px) {
+    .carousel-item img{
+        max-height: calc(100vh - 200px);
+    }
+}
+@media screen and (max-height: 1366px) and (max-width: 1024px) and (min-height: 992px) and (min-width: 992px) {
+    .carousel-item img{
+        max-height: calc(100vh - 600px);
+    }
+}
