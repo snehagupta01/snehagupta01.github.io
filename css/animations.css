@@ -594,21 +594,21 @@
     }
 }
 
-.p-active, .p-inactive {
+.q-active, .q-inactive {
     animation-fill-mode: forwards;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
 }
 
-.p-active-1{ animation-name: active-1; }
-.p-active-2{ animation-name: active-2; }
-.p-active-3{ animation-name: active-3; }
-.p-active-4{ animation-name: active-4; }
+.q-active-1{ animation-name: active-1; }
+.q-active-2{ animation-name: active-2; }
+.q-active-3{ animation-name: active-3; }
+.q-active-4{ animation-name: active-4; }
 
-.p-inactive-1{ animation-name: inactive-1; }
-.p-inactive-2{ animation-name: inactive-2; }
-.p-inactive-3{ animation-name: inactive-3; }
-.p-inactive-4{ animation-name: inactive-4; }
+.q-inactive-1{ animation-name: inactive-1; }
+.q-inactive-2{ animation-name: inactive-2; }
+.q-inactive-3{ animation-name: inactive-3; }
+.q-inactive-4{ animation-name: inactive-4; }
 
 @keyframes active-1 {
     0% { width: 25%; left: 0 }

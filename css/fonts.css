@@ -1,4 +1,21 @@
 @font-face {
     font-family: Heading;
+    /* src: url("../fonts/Brusher.ttf"); */
     src: url("../fonts/Pacifico.ttf");
+}
+@font-face {
+    font-family: PrimaryLight;
+    src: url("../fonts/Lato-Light.ttf");
+}
+@font-face {
+    font-family: Primary;
+    src: url("../fonts/Lato-Regular.ttf");
+}
+@font-face {
+    font-family: PrimaryMedium;
+    src: url("../fonts/Lato-Bold.ttf");
+}
+@font-face {
+    font-family: PrimaryBold;
+    src: url("../fonts/Lato-Black.ttf");
 }
